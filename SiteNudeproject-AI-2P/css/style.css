@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header .logo {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero, .about, .collaborations, .owners {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.owner-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.owner-content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.collaborations {
+    padding: 20px;
+    text-align: center;
+}
+
+.collab-item {
+    margin-bottom: 20px;
+}
+
+.collab-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.collab-button:hover {
+    background-color: #555;
+}
+
+/* Estilos da seção "About" */
+.about {
+    padding: 20px;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilos para o acordeão */
+.accordion {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.accordion-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: calc(20% - 20px); /* Calcula 20% do width da linha - margem entre os botões */
+    margin-right: 10px; /* Margem entre os botões */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background-color: #555;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    text-align: left; /* Texto justificado à esquerda */
+}
+
+.sub-accordion-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.sub-accordion-btn:hover {
+    background-color: #777;
+}
+
+.sub-accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+.sub-accordion-content img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.active {
+    background-color: #555;
+    margin-top: 10px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

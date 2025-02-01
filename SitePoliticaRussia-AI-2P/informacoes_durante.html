@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Durante o Stalinismo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fbff00;
+            padding: 20px;
+        }
+        .collapsible {
+            background-color: #ff0000;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .collapsible:hover {
+            background-color: #ca0e8b;
+        }
+        .content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: rgb(226, 202, 65);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content p {
+            padding: 15px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Durante o Stalinismo</h1>
+    </header>
+    <main>
+        <button class="collapsible">1. Situação Política</button>
+        <div class="content">
+            <p>Durante o governo de Stalin (1924-1953), a União Soviética foi marcada por um regime autoritário. O culto à personalidade de Stalin foi amplamente promovido, e qualquer oposição era brutalmente reprimida através de expurgos e prisões em massa.</p>
+        </div>
+
+        <button class="collapsible">2. Economia</button>
+        <div class="content">
+            <p>A economia soviética foi transformada por planos quinquenais, que buscavam a rápida industrialização e a coletivização forçada da agricultura. Apesar de alguns avanços industriais, milhões de pessoas morreram devido à fome e às políticas econômicas rígidas.</p>
+        </div>
+
+        <button class="collapsible">3. Política Interna</button>
+        <div class="content">
+            <button class="collapsible">Planos Quinquenais</button>
+            <div class="content">
+                <p>Os planos econômicos centralizados queriam transformar a União Soviética em uma potência industrial, mas resultaram em grandes sofrimentos para os camponeses.</p>
+            </div>
+
+            <button class="collapsible">Expurgos e Terror</button>
+            <div class="content">
+                <p>Milhões de pessoas foram perseguidas, presas ou executadas durante os Grandes Expurgos, uma campanha de repressão política organizada por Stalin.</p>
+            </div>
+
+            <button class="collapsible">Propaganda e Controle</button>
+            <div class="content">
+                <p>A propaganda estatal exaltava Stalin como líder infalível, enquanto a mídia era rigidamente controlada pelo governo.</p>
+            </div>
+        </div>
+
+        <button class="collapsible">4. Segunda Guerra Mundial</button>
+        <div class="content">
+            <p>Stalin liderou a União Soviética durante a Segunda Guerra Mundial, conhecida na Rússia como a Grande Guerra Patriótica. O país sofreu imensas perdas humanas, mas surgiu como uma superpotência global após a vitória contra a Alemanha Nazista.</p>
+            <a href="https://youtu.be/r8i33Mg4noI?si=x6NEEjl8GpHq01hw" 
+               target="_blank" 
+               class="btn btn-primary">
+                Stalin na Segunda Guerra Mundial
+            </a>
+        </div>
+        
+        <img src="img/durante-stalinismo.jpg" alt="Durante o Stalinismo">
+    </main>
+
+    <script>
+        const coll = document.querySelectorAll(".collapsible");
+        coll.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

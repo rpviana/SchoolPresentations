@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Antes do Stalinismo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .collapsible {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .collapsible:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p, .content ul {
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /* Sub-conteúdo dentro de "Vida de Lenin" */
+        .sub-content {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .sub-content .collapsible {
+            margin-top: 10px;
+            width: 95%; /* Botões menores */
+            text-align: left;
+        }
+
+        .sub-content .content {
+            margin-left: 20px; /* Cria um recuo visual */
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Antes do Stalinismo</h1>
+</header>
+<main>
+    <button class="collapsible">1. Situação Política</button>
+    <div class="content">
+        <p>A Rússia era governada pelo czarismo, um regime autocrático onde o czar detinha poderes absolutos. A sociedade era marcada por desigualdades extremas, com a nobreza controlando terras e recursos enquanto a maioria da população vivia na pobreza. A insatisfação popular crescia, especialmente após derrotas militares e crises econômicas.</p>
+    </div>
+
+    <button class="collapsible">2. Economia</button>
+    <div class="content">
+        <p>A economia da Rússia era baseada na agricultura feudal, com grande parte da terra que pertencia à aristocracia. A industrialização começou tardiamente e estava concentrada em poucas regiões urbanas, enquanto o campo permanecia atrasado. A fome e a miséria eram comuns entre os camponeses.</p>
+    </div>
+
+    <button class="collapsible">3. Vida de Lenin</button>
+    <div class="content">
+        <p>Владимир Ленин, mais conhecido como Lenin, foi uma das, se é que não foi a figura central na Revolução Russa de 1917 e o líder fundador da União Soviética. O seu pensamento político e liderança influenciaram profundamente a história mundial.</p>
+        
+        <div class="sub-content">
+            <button class="collapsible">Infância e Formação</button>
+            <div class="content">
+                <ul>
+                    <li><strong>Nascimento e Família:</strong> Lenin nasceu em 1870 na cidade de Simbirsk, em uma família de classe média instruída.</li>
+                    <li><strong>Influência do Irmão:</strong> A execução do seu irmão mais velho, Aleksandr Ulyanov, por participar de uma tentativa de assassinato do czar, marcou profundamente Lenin.</li>
+                    <li><strong>Estudos e Marxismo:</strong> Durante os seus estudos de Direito na Universidade de Kazan, Lenin foi expulso por participar de movimentos estudantis.</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Liderança e Criação da União Soviética</button>
+            <div class="content">
+                <ul>
+                    <li><strong>Comissário do Povo:</strong> Lenin assumiu o cargo de líder do governo bolchevique após a Revolução de Outubro.</li>
+                    <li><strong>Guerra Civil Russa:</strong> Lenin liderou os bolcheviques durante a Guerra Civil, consolidando o poder soviético.</li>
+                    <li><strong>Comunismo de Guerra:</strong> Lenin implementou políticas emergenciais para manter o controle estatal durante a guerra.</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Revolução de 1905</button>
+            <div class="content">
+                <p>Durante a Revolução de 1905, Lenin retornou brevemente do exílio para organizar movimentos revolucionários. Embora a revolta tenha sido reprimida, ela serviu como ensaio para a Revolução de 1917.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="collapsible">4. Últimos Anos de Lenin</button>
+    <div class="content">
+        <p>Nos últimos anos da sua vida, Lenin enfrentou problemas de saúde graves, incluindo derrames que limitaram as suas atividades políticas. Ele preocupava-se com o futuro da União Soviética e alertou sobre o poder crescente de Stalin.</p>
+        <a href="https://www.youtube.com/watch?v=8MF9ogvqMn8&start=702" 
+           target="_blank" 
+           class="btn btn-primary">
+            Últimos Anos
+        </a>
+    </div>    
+    <img src="img/lenin.svg" alt="Bandeira Comunista">    
+</main>
+
+    <script>
+        const coll = document.querySelectorAll(".collapsible");
+        coll.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+
+                // Se o conteúdo estiver fechado, expandir
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null; // Fecha o conteúdo
+                } else {
+                    // Expande o conteúdo para o tamanho necessário
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

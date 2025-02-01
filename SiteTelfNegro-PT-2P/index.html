@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Telefone Negro - Apresentação</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>O Telefone Negro</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('elenco')">Elenco e Equipa Técnica</a></li>
+            <li><a href="#" onclick="showSection('sinopse')">Sinopse</a></li>
+            <li><a href="#" onclick="showSection('acoes')">Ações</a></li>
+            <li><a href="#" onclick="showSection('avaliacao')">Avaliação do Conteúdo</a></li>
+            <li><a href="#" onclick="showSection('premios')">Prémios</a></li>
+            <li><a href="#" onclick="showSection('opiniao')">Opinião Crítica</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="initialScreen">
+        <h1>Apresentação do Filme: O Telefone Negro</h1>
+    </div>
+
+    <div id="elenco" class="content-section">
+        <h2>Elenco</h2>
+        <button onclick="toggleDisplay('team-info')">Equipa Técnica</button>
+        <button onclick="toggleDisplay('elenco-info')">Elenco</button>
+
+        <div id="team-info" class="team-info" style="display: none;">
+            <h3 class="centered-text">Equipa Técnica</h3>
+            <div class="character-images">
+                <div class="character-item">
+                    <img src="img/roteirista.webp" alt="Personagem 1" class="character-img">
+                    <h4 class="centered-title">Scott Derrickson</h4>
+                    <h5 class="centered-subtitle">Roteirista</h5>
+                </div>
+                <div class="character-item">
+                    <img src="img/jason.webp" alt="Personagem 2" class="character-img">
+                    <h4 class="centered-title">Jason Blum</h4>
+                    <h5 class="centered-subtitle">Produtor</h5>
+                </div>
+                <div class="character-item">
+                    <img src="img/ryan.webp" alt="Personagem 3" class="character-img">
+                    <h4 class="centered-title">Ryan Turek</h4>
+                    <h5 class="centered-subtitle">Produtor Executivo</h5>
+                </div>
+            </div>
+            <div class="character-images">
+                <div class="character-item">
+                    <img src="img/patti.webp" alt="Personagem 4" class="character-img">
+                    <h4 class="centered-title">Patti Podesta</h4>
+                    <h5 class="centered-subtitle">Cenografista</h5>
+                </div>
+                <div class="character-item">
+                    <img src="img/terri.jpg" alt="Personagem 5" class="character-img">
+                    <h4 class="centered-title">Terri Taylor</h4>
+                    <h5 class="centered-subtitle">Diretor de Elenco</h5>
+                </div>
+                <div class="character-item">
+                    <img src="img/sarah.webp" alt="Personagem 6" class="character-img">
+                    <h4 class="centered-title">Sarah Domeier</h4>
+                    <h5 class="centered-subtitle">Subdiretor de Elenco</h5>
+                </div>
+            </div>
+            <div class="character-images">
+                <div class="character-item">
+                    <img src="img/Tom_Savini.webp" alt="Personagem 7" class="character-img">
+                    <h4 class="centered-title">Tom Savini</h4>
+                    <h5 class="centered-subtitle">Maquiador</h5>
+                </div>
+                <div class="character-item">
+                    <img src="img/frederic.jpeg" alt="Personagem 8" class="character-img">
+                    <h4 class="centered-title">Frédéric Thoraval</h4>
+                    <h5 class="centered-subtitle">Montador Chefe</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elenco -->
+        <div id="elenco-info" class="elenco-info" style="display: none;">
+            <button onclick="toggleDisplay('main-characters')">Personagens Principais</button>
+            <button onclick="toggleDisplay('secondary-characters')">Personagens Secundários</button>
+
+            <!-- Personagens Principais -->
+            <div id="main-characters" class="character-info" style="display: none;">
+                <h3 class="centered-text">Personagens Principais</h3>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/Ethan.webp" alt="Personagem 3" class="character-img">
+                        <h4 class="centered-title">Ethan Hawke</h4>
+                        <h5 class="centered-subtitle">The Grabber</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/finn.jpeg" alt="Personagem 4" class="character-img">
+                        <h4 class="centered-title">Mason Thames</h4>
+                        <h5 class="centered-subtitle">Finney</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/irmaFinney.webp" alt="Personagem 5" class="character-img">
+                        <h4 class="centered-title">Madeleine McGraw</h4>
+                        <h5 class="centered-subtitle">Irmã do Finney</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personagens Secundários -->
+            <div id="secondary-characters" class="character-info" style="display: none;">
+                <h3 class="centered-text">Personagens Secundários</h3>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/paiFinney.jpg" alt="Personagem 6" class="character-img">
+                        <h4 class="centered-title">Jeremy Davies</h4>
+                        <h5 class="centered-subtitle">Pai do Finney</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/robin.jpeg" alt="Personagem 7" class="character-img">
+                        <h4 class="centered-title">Miguel Cazarez Mora</h4>
+                        <h5 class="centered-subtitle">Robin</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/Bruce.jpeg" alt="Personagem 8" class="character-img">
+                        <h4 class="centered-title">Tristan Pravong</h4>
+                        <h5 class="centered-subtitle">Bruce</h5>
+                    </div>
+                </div>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/vincenzo.jpg" alt="Personagem 9" class="character-img">
+                        <h4 class="centered-title">Brady Hepner</h4>
+                        <h5 class="centered-subtitle">Vincenzo</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/irmaograbber.jpg" alt="Personagem 10" class="character-img">
+                        <h4 class="centered-title">James Ransone</h4>
+                        <h5 class="centered-subtitle">Irmão do Grabber</h5>
+                    </div>
+                    <div class="character-item">
+                        <img src="img/detetive.jpeg" alt="Personagem 11" class="character-img">
+                        <h4 class="centered-title">Markus T. Barone</h4>
+                        <h5 class="centered-subtitle">Detetive</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sinopse" class="content-section">
+        <h2>Sinopse</h2>
+        <div class="sinopse-background" style="background-image: url('img/capa.jpg');">
+        </div>
+    </div>
+    
+
+    <div id="acoes" class="content-section">
+        <h2>Ações do filme</h2>
+        <button onclick="toggleDisplay('main-actions')">Ações Principais</button>
+        <button onclick="toggleDisplay('secondary-actions')">Ações Secundárias</button>
+
+        <!-- Ações Principais -->
+        <div id="main-actions" class="character-info" style="display: none;">
+            <h3 style="color: #800080; font-weight: bold; font-size: 30px;">Ações Principais</h3>
+            <ul style="font-size: 24px;">
+                <li>O sequestro do Finney</li>
+                <li>As chamadas do telefone</li>
+                <li>A luta do Finney pela sobrevivência</li>
+                <li>A busca da Gwen por Finney</li>
+                <li>O Confronto final com o Grabber</li>
+            </ul>
+        </div>
+        
+        <!-- Ações Secundárias -->
+        <div id="secondary-actions" class="character-info" style="display: none;">
+            <h3 style="color: #800080; font-weight: bold; font-size: 30px;">Ações Secundárias</h3>
+            <ul style="font-size: 24px;">
+                <li>Interações entre Finney e os seus amigos</li>
+                <li>As visões da Gwen</li>
+                <li>Flashbacks da vida familiar</li>
+                <li>Os espíritos a comunicarem-se</li>
+                <li>O bullying na escola</li>
+            </ul>
+        </div>
+    </div>
+
+        <div id="avaliacao" class="content-section">
+            <h2>Avaliação do Conteúdo</h2>
+            
+            <!-- Botões de Avaliação -->
+            <button onclick="toggleDisplay('avaliacao-enredo')">Avaliação do Enredo/Plot</button>
+            <button onclick="toggleDisplay('avaliacao-personagens')">Avaliação das Personagens</button>
+            <button onclick="toggleDisplay('avaliacao-cenario')">Avaliação do Cenário</button>
+            <button onclick="toggleDisplay('avaliacao-trilha')">Avaliação da Trilha Sonora</button>
+        
+            <!-- Avaliação do Enredo -->
+            <div id="avaliacao-enredo" class="character-info" style="display: none;">
+                <h3>Avaliação do Enredo/Plot</h3>
+                <div class="star-rating">
+                    <span class="star" onclick="rate('enredo', 1)">&#9733;</span>
+                    <span class="star" onclick="rate('enredo', 2)">&#9733;</span>
+                    <span class="star" onclick="rate('enredo', 3)">&#9733;</span>
+                    <span class="star" onclick="rate('enredo', 4)">&#9733;</span>
+                    <span class="star" onclick="rate('enredo', 5)">&#9733;</span>
+                </div>
+            </div>
+        
+            <!-- Avaliação das Personagens -->
+            <div id="avaliacao-personagens" class="character-info" style="display: none;">
+                <h3>Avaliação das Personagens</h3>
+                
+                <!-- Personagem 1 -->
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/Finney1.webp" alt="Personagem 1" class="character-img">
+                        <h4 class="centered-title">Mason Thames</h4>
+                        <h5 class="centered-subtitle">Finney</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 4)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 2 -->
+                    <div class="character-item">
+                        <img src="img/irma1.jpg" alt="Personagem 2" class="character-img">
+                        <h4 class="centered-title">Madeleine McGraw</h4>
+                        <h5 class="centered-subtitle">Irmã do Finney</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Irmã do Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 4)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 3 -->
+                    <div class="character-item">
+                        <img src="img/Grabber1.avif" alt="Personagem 3" class="character-img">
+                        <h4 class="centered-title">Ethan Hawke</h4>
+                        <h5 class="centered-subtitle">The Grabber</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Ethan', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Ethan', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Ethan', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Ethan', 4)">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/irmaograbber1.webp" alt="Personagem 4" class="character-img">
+                        <h4 class="centered-title">James Ransone</h4>
+                        <h5 class="centered-subtitle">Irmão do Grabber</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('James', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('James', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('James', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('James', 4)">&#9733;</span>
+                            <span class="star" onclick="rate('James', 5)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 2 -->
+                    <div class="character-item">
+                        <img src="img/paiFinney1.jpg" alt="Personagem 5" class="character-img">
+                        <h4 class="centered-title">Jeremy Davies</h4>
+                        <h5 class="centered-subtitle">Pai do Finney</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Jeremy', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Jeremy', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Jeremy', 3)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 3 -->
+                    <div class="character-item">
+                        <img src="img/Robin1.webp" alt="Personagem 6" class="character-img">
+                        <h4 class="centered-title">Miguel Cazarez Mora</h4>
+                        <h5 class="centered-subtitle">Robin</h5>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Robin', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Robin', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Robin', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Robin', 4)">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <!-- Avaliação do Cenário -->
+            <div id="avaliacao-cenario" class="character-info" style="display: none;">
+                <h3>Avaliação do Cenário</h3>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/CenarioCasa.avif" alt="Cenario 1" class="character-img">
+                        <h4 class="centered-title">Casa do Finney</h4>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 3)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 2 -->
+                    <div class="character-item">
+                        <img src="img/CenarioCave.webp" alt="Cenario 2" class="character-img">
+                        <h4 class="centered-title">Cave do Grabber</h4>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Irmã do Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 4)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 4)">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-images">
+                    <div class="character-item">
+                        <img src="img/CenarioEscola.jpg" alt="Cenario 3" class="character-img">
+                        <h4 class="centered-title">Escola do Finney</h4>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Finney', 2)">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <!-- Personagem 2 -->
+                    <div class="character-item">
+                        <img src="img/cenariocasa.jpg" alt="Cenario 4" class="character-img">
+                        <h4 class="centered-title">Casa do Grabber</h4>
+                        <div class="star-rating">
+                            <span class="star" onclick="rate('Irmã do Finney', 1)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 2)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 3)">&#9733;</span>
+                            <span class="star" onclick="rate('Irmã do Finney', 4)">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Avaliação da Trilha Sonora -->
+            <div id="avaliacao-trilha" class="character-info" style="display: none;">
+                <h3>Avaliação da Trilha Sonora</h3>
+                <div class="star-rating">
+                    <span class="star" onclick="rate('trilha', 1)">&#9733;</span>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div id="premios" class="content-section">
+        <h2>Prémios</h2>
+        <button onclick="toggleDisplay('nomeados')">Nomeado</button>
+        <button onclick="toggleDisplay('vencidos')">Vencido</button>
+    
+        <!-- Nomeados -->
+        <div id="nomeados" class="character-info" style="display: none;">
+            <h3 style="color: #800080; font-weight: bold; font-size: 30px;">Nomeados</h3>
+            <ul style="font-size: 24px;">
+                <li>Melhor Ator de Suporte - Ethan Hawke</li>
+                <li>Melhor Performance feita por um/uma jovem ator/atriz - Madeleine McGraw</li>
+                <li>Melhor Performance feita por um/uma jovem ator/atriz - Mason Thames</li>
+                <li>Melhor Roteiro - Scott Derrickson</li>
+            </ul>
+        </div>
+    
+        <!-- Vencidos -->
+        <div id="vencidos" class="character-info" style="display: none;">
+            <h3 style="color: #800080; font-weight: bold; font-size: 30px;">Vencido</h3>
+            <ul style="font-size: 24px;">
+                <li>Melhor Terror.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="opiniao" class="content-section">
+        <h2>Opinião Crítica</h2>
+            <div class="star-rating">
+                <span class="star" onclick="rate('Irmã do Finney', 1)">&#9733;</span>
+                <span class="star" onclick="rate('Irmã do Finney', 2)">&#9733;</span>
+                <span class="star" onclick="rate('Irmã do Finney', 3)">&#9733;</span>
+                <span class="star" onclick="rate('Irmã do Finney', 4)">&#9733;</span>
+            </div>
+                <div class="sinopse-background" style="background-image: url('img/capa.jpg');">
+                </div>
+    </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donos - Nude Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .owner-content {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Nude Project</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">About nude</a></li>
+                <li><a href="colaboracoes.html">Collections</a></li>
+                <li><a href="donos.html">Owners</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="owners">
+            <h2>Owners of Nude Project</h2>
+            <button class="owner-button" onclick="toggleContent('bruno-content')">Bruno</button>
+            <div id="bruno-content" class="owner-content">
+                <h3>Bruno Casanovas</h3>
+                <p>Bruno Casanovas is a young entrepreneur and co-founder of Nude Project, a streetwear brand he launched together with Alex Benlloch in 2018. Nude Project has quickly made a name for itself in the streetwear market, being known for its creative designs and provocative messages that resonate with a young and engaged audience.
+
+                    Bruno Casanovas, born and raised in Spain, in Bilbao ig, stood out for his ability to understand and capture emerging trends in fashion and street culture. 
+                    <p>He and his partner, Alex, started the brand with a modest initial investment, but through the clever use of social media, digital marketing and collaboration with influencers, they have managed to significantly expand Nude Project's reach.</p>
+                    <p>In addition to its commercial success, Nude Project stands out for its artistic and cultural approach. The brand doesn't just produce clothes, but seeks to create a movement that celebrates self-expression, creativity and authenticity.</p> 
+                    <p>Casanovas and his team often collaborate with artists, musicians and other cultural figures to keep the brand relevant and innovative.</p>
+                    Bruno Casanovas' trajectory is an example of how entrepreneurial vision, combined with a deep understanding of contemporary culture, can lead to success in the competitive world of fashion.</p>
+                <p>Btw Bruno loves Tyler The Creator.</p>
+            </div>
+
+            <button class="owner-button" onclick="toggleContent('alex-content')">Alex</button>
+            <div id="alex-content" class="owner-content">
+                <h3>Alex Benlloch</h3>
+                <p>Alex Benlloch is the co-founder of Nude Project, together with Bruno Casanovas. He is a central figure in the creation and growth of the brand, playing a crucial role in Nude Project's business strategy and creative development.
+                    <p>Alex Benlloch, like Bruno, is from Spain and shares a passion for fashion and street culture. The pair started Nude Project in 2018 with the aim of creating a streetwear brand that didn't just sell clothes, but also told stories and connected deeply with its target audience.</p>
+                    <p>Alex brings to Nude Project a combination of business vision and aesthetic sensibility, helping the brand to stand out in a saturated market. He is involved in several areas of the business, from conceiving the designs to executing the marketing campaigns. Alex and Bruno's collaborative approach, along with their ability to leverage social media, has been key to Nude Project's success.</p>
+                    <p>Under Alex's co-leadership, Nude Project has become known for its innovative, high-quality collections, often featuring bold graphics and messages that reflect themes of self-expression, freedom and authenticity. The brand has also stood out for its collaborations with artists and influencers, further strengthening its presence and relevance in urban fashion.</p>
+                    Alex Benlloch is an example of a young entrepreneur who combines creativity with business skills, helping to turn Nude Project into a recognized name in the streetwear world.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nude Project. All rights reserved to Rodrigo Viana.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

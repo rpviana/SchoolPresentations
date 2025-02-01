@@ -1,0 +1,118 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  font-size: 4rem; /* Aumentado de 3rem para 4rem */
+  color: #343a40;
+}
+
+header p {
+  font-size: 1.5rem; /* Aumentado de 1.25rem para 1.5rem */
+}
+
+.container-slides {
+  width: 80%;
+  max-width: 1200px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.slide {
+  width: 45%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide-content {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+.slide-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-page {
+  display: none;
+  padding: 20px;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.details-page .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.details-page h2 {
+  font-size: 3rem; /* Aumentado de 2.5rem para 3rem */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 20px;
+}
+
+.btn-detail {
+  padding: 10px 20px;
+  font-size: 1.2rem; /* Aumentado de 1rem para 1.2rem */
+  transition: transform 0.3s;
+}
+
+.btn-detail:hover {
+  transform: scale(1.1); /* Efeito hover para os botões */
+}
+
+.info-content {
+  padding: 20px;
+  font-size: 1.2rem; /* Aumentado de 1.1rem para 1.2rem */
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

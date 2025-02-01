@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1001;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-section {
+    display: none;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
+.team-info, .elenco-info, .character-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.character-images {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    margin: 20px 0; /* Espaço acima e abaixo do grupo de imagens */
+}
+
+.character-images img {
+    width: 394px; /* Define a largura desejada */
+    height: 525px; /* Define a altura desejada */
+    object-fit: cover; /* Faz com que a imagem preencha o espaço, cortando o que exceder */
+    margin: 0 15px; /* Aumentado o espaço entre as imagens */
+}
+
+.character-item {
+    text-align: center; /* Centraliza o texto dentro do item */
+    margin: 0 120px; /* Aumentado o espaço entre os itens */
+}
+
+.centered-text {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#initialScreen {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    text-align: center; /* Centraliza o texto dentro do div */
+}
+
+#initialScreen h1 {
+    font-size: 48px; /* Ajuste o tamanho conforme necessário */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Outras regras CSS que você já tem */
+
+
+.centered-title {
+    margin-top: 10px; /* Espaço acima do título da imagem */
+}
+
+.centered-subtitle {
+    font-size: 12px; /* Tamanho da fonte menor para o subtítulo */
+    color: #555; /* Cor do subtítulo */
+    margin-top: 2px; /* Ajustar conforme necessário */
+    margin-bottom: 0; /* Remove o espaço abaixo do subtítulo, se necessário */
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem; /* Tamanho das estrelas */
+    color: #FFD700; /* Cor das estrelas */
+    margin-top: 10px;
+}
+
+.star {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.star:hover {
+    color: #FF4500; /* Cor ao passar o mouse */
+}
+
+.character-images {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    margin: 20px 0; /* Espaço acima e abaixo do grupo de imagens */
+}
+
+.character-img {
+    width: 394px; /* Largura das imagens */
+    height: 525px; /* Altura das imagens */
+    object-fit: cover; /* Cobre o espaço disponível */
+    margin: 0 15px; /* Espaço entre as imagens */
+}
+
+.character-item {
+    text-align: center; /* Centraliza o texto */
+    margin: 0 120px; /* Espaço entre os itens */
+}
+
+.sinopse-background {
+    background-size: cover; /* Faz com que a imagem cubra toda a div */
+    background-position: center; /* Centraliza a imagem */
+    height: 600px; /* Altura da div, ajuste conforme necessário */
+    display: flex; /* Para centralizar o texto verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+}
+

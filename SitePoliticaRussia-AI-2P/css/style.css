@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e2e2e2, #ffffff);
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #4a90e2;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    padding: 20px;
+    position: absolute;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.card p {
+    text-align: left;
+    flex: 1;
+}
+
+.card.hidden {
+    opacity: 0;
+    transform: translateX(100%); /* Sai pela direita */
+}
+
+.card.active {
+    opacity: 1;
+    transform: translateX(0); /* Entra no centro */
+}
+
+/* Botão Ver Informações */
+.info-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: auto;
+}
+
+/* Estilo para os botões de navegação */
+.navigation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+#prevButton, #nextButton {
+    pointer-events: auto;
+    background-color: #007bff; /* Azul para o fundo do botão */
+    border: none;
+    border-radius: 0; /* Quadrado */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white; /* Define a cor do texto */
+}
+
+#prevButton i, #nextButton i {
+    font-size: 24px;
+    color: white; /* Define a cor da seta como branca */
+}
+
+/* Se necessário, você pode adicionar mais estilos para o hover */
+#prevButton:hover, #nextButton:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+
+#prevButton {
+    left: 20px; /* Botão "Anterior" na esquerda */
+}
+
+#nextButton {
+    right: 20px; /* Botão "Próximo" na direita */
+}
+
+.btn i {
+    font-size: 24px;
+}

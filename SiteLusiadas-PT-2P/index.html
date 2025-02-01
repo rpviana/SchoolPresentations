@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação de Camões</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="initialScreen" class="initial-screen">
+        <h1>Apresentação de Português</h1>
+    </div>
+    <header>
+        <h1>Apresentação de Luís de Camões</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('introduction')">Introdução</a></li>
+                <li><a href="#" onclick="showSection('stanzas')">Estrofes</a></li>
+                <li><a href="#" onclick="showSection('conclusion')">Conclusão</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction" class="content-section">
+            <h2>Introdução</h2>
+            <button onclick="showIntro('camoes')">Introdução sobre Luís de Camões</button>
+            <div id="introCamoes" class="intro-content">
+                <button onclick="toggleDisplay('life')">Vida e Contexto Histórico</button>
+                <div id="life" class="intro-content-detail">
+                    <p>Luís de Camões nasceu em Lisboa, provavelmente em 1524, em uma família de pequena nobreza. Pouco se sabe sobre a sua juventude, mas acredita-se que tenha estudado em Coimbra, onde teria recebido uma educação clássica.
+                    Camões viveu durante o Renascimento, uma época de grande expansão cultural e geográfica para Portugal. Ele testemunhou o auge do Império Português, com as descobertas de novas terras e rotas comerciais, o que influenciou profundamente na sua obra ("Os Lusiadas").</p>
+                </div>
+                <button onclick="toggleDisplay('works')">"Aventuras"</button>
+                <div id="works" class="intro-content-detail">
+                    <p>Por volta de 1547, Camões foi exilado de Lisboa, possivelmente por razões amorosas e políticas. Ele alistou-se no exército e lutou no norte da África, onde perdeu um olho em batalha. 
+                    Após o seu retorno a Lisboa, envolveu-se em uma luta e foi preso, sendo posteriormente enviado para a Índia como punição.</p>
+                    <p>Na Índia, Camões teve várias aventuras, viajando por lugares como Goa, Moçambique e a China. Durante esse período, ele escreveu grande parte de "Os Lusíadas". A lenda diz que Camões sobreviveu a um naufrágio, salvando apenas o manuscrito da sua obra-prima.</p>
+                </div>
+                <button onclick="toggleDisplay('style')">Os Lusíadas</button>
+                <div id="style" class="intro-content-detail">
+                    <p>Publicado em 1572, "Os Lusíadas" é um poema épico que narra as aventuras de Vasco da Gama e a descoberta do caminho marítimo para a Índia. Dividido em dez cantos, o poema combina história, mitologia e a visão pessoal de Camões sobre o destino de Portugal. "Os Lusíadas" é celebrado pela sua rica linguagem, complexidade narrativa e profundidade filosófica. Ele exalta os feitos heroicos dos portugueses e reflete sobre a condição humana, o papel do destino e a glória e tragédia da expansão imperial.</p>
+                </div>
+                <button onclick="toggleDisplay('influence')">Poesia Lírica</button>
+                <div id="influence" class="intro-content-detail">
+                    <p>Além de "Os Lusíadas", Camões escreveu uma vasta quantidade de poesia lírica, incluindo sonetos, elegias, canções e redondilhas. Os seus poemas líricos são marcados pela introspecção, pela intensidade emocional e pela habilidade técnica. Camões abordou temas como o amor, a saudade, a passagem do tempo e a condição humana, sempre com uma profundidade e sensibilidade únicas.</p>
+                </div>
+                <button onclick="toggleDisplay('legacy')">Últimos Anos </button>
+                <div id="legacy" class="intro-content-detail">
+                    <p>Camões retornou a Lisboa por volta de 1570, onde encontrou dificuldades financeiras e uma saúde debilitada. Ele faleceu em 1580, no mesmo ano em que Portugal perdeu a sua independência para a Espanha. Apesar das suas dificuldades pessoais, o legado literário de Camões foi imenso.</p>
+                    <p>O seu impacto na literatura portuguesa e mundial é inegável. "Os Lusíadas" é estudado e admirado em todo o mundo, e a sua poesia lírica continua a ser apreciada pela sua beleza e profundidade. Camões é frequentemente comparado a outros grandes poetas épicos, como Homero, Virgílio e Dante. Aqui em Portugal, ele é uma figura nacional, simbolizando o espírito aventureiro e a glória histórica do nosso país.</p>
+                    <p>Luís Vaz de Camões permanece uma figura central na cultura e literatura portuguesas, um poeta cuja obra transcende o tempo e continua a inspirar gerações de leitores e escritores. A Sua vida de aventuras e adversidades, combinada com o seu gênio literário, faz dele um dos grandes nomes da literatura universal.</p>
+                </div>
+                <button onclick="toggleDisplay('tudo')">Informação completa</button>
+                <div id="tudo" class="intro-content-detail">
+                    <p>Luís Vaz de Camões (c. 1524-1580) foi um dos maiores, se não o maior poeta do nosso país e uma das figuras mais importantes da literatura mundial. A sua obra-prima, "Os Lusíadas", é um épico que celebra a era das descobertas portuguesas e é considerada uma das obras fundamentais da literatura ocidental.</p>
+                    <p>Luís de Camões nasceu em Lisboa, provavelmente em 1524, em uma família de pequena nobreza. Pouco se sabe sobre a sua juventude, mas acredita-se que tenha estudado em Coimbra, onde teria recebido uma educação clássica. Camões viveu durante o Renascimento, uma época de grande expansão cultural e geográfica para Portugal. Ele testemunhou o auge do Império Português, com as descobertas de novas terras e rotas comerciais, o que influenciou profundamente na sua obra ("Os Lusiadas").</p>
+                    <p>Por volta de 1547, Camões foi exilado de Lisboa, possivelmente por razões amorosas e políticas. Ele alistou-se no exército e lutou no norte da África, onde perdeu um olho em batalha. Após o seu retorno a Lisboa, envolveu-se em uma luta e foi preso, sendo posteriormente enviado para a Índia como punição.</p>
+                    <p>Na Índia, Camões teve várias aventuras, viajando por lugares como Goa, Moçambique e a China. Durante esse período, ele escreveu grande parte de "Os Lusíadas". A lenda diz que Camões sobreviveu a um naufrágio, salvando apenas o manuscrito da sua obra-prima.</p>
+                    <p>Publicado em 1572, "Os Lusíadas" é um poema épico que narra as aventuras de Vasco da Gama e a descoberta do caminho marítimo para a Índia. Dividido em dez cantos, o poema combina história, mitologia e a visão pessoal de Camões sobre o destino de Portugal. "Os Lusíadas" é celebrado pela sua rica linguagem, complexidade narrativa e profundidade filosófica. Ele exalta os feitos heroicos dos portugueses e reflete sobre a condição humana, o papel do destino e a glória e tragédia da expansão imperial.</p>
+                    <p>Além de "Os Lusíadas", Camões escreveu uma vasta quantidade de poesia lírica, incluindo sonetos, elegias, canções e redondilhas. Os seus poemas líricos são marcados pela introspecção, pela intensidade emocional e pela habilidade técnica. Camões abordou temas como o amor, a saudade, a passagem do tempo e a condição humana, sempre com uma profundidade e sensibilidade únicas.</p>
+                    <p>Camões retornou a Lisboa por volta de 1570, onde encontrou dificuldades financeiras e uma saúde debilitada. Ele faleceu em 1580, no mesmo ano em que Portugal perdeu a sua independência para a Espanha. Apesar das suas dificuldades pessoais, o legado literário de Camões foi imenso.</p>
+                    <p>O seu impacto na literatura portuguesa e mundial é inegável. "Os Lusíadas" é estudado e admirado em todo o mundo, e a sua poesia lírica continua a ser apreciada pela sua beleza e profundidade. Camões é frequentemente comparado a outros grandes poetas épicos, como Homero, Virgílio e Dante. Aqui em Portugal, ele é uma figura nacional, simbolizando o espírito aventureiro e a glória histórica do nosso país.</p>
+                    <p>Luís Vaz de Camões permanece uma figura central na cultura e literatura portuguesas, um poeta cuja obra transcende o tempo e continua a inspirar gerações de leitores e escritores. A Sua vida de aventuras e adversidades, combinada com o seu gênio literário, faz dele um dos grandes nomes da literatura universal.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section id="stanzas" class="content-section">
+            <h2>Estrofes</h2>
+            <button onclick="toggleDisplay('generalInfo')">Ver Info Geral</button>
+            <div id="generalInfo" class="general-info">
+                <button onclick="toggleDisplay('generalEstancia')">Estâncias</button>
+                <div id="generalEstancia" class="general-content">
+                    <p>Constituida por 4 Oitavas</p>
+                </div>
+                <button onclick="toggleDisplay('generalVersos')">Versos</button>
+                <div id="generalVersos" class="general-content">
+                    <p>32 Versos decassilábicos</p>
+                </div>
+                <button onclick="toggleDisplay('generalEsquema')">Esquema Rimático</button>
+                <div id="generalEsquema" class="general-content">
+                    <p style="color: red;">ABABABCC</p>
+                    <p>(Duas rimas cruzadas em ABAB)</p>
+                    <p>(Uma rima emparelhada em CC)</p>
+                </div>
+            </div>
+            <div class="stanza-container">
+                <div class="stanza">
+                    <h3>V, 97</h3>
+                    <p>"Enfim, não houve forte capitão,<br>
+                    Que não fosse também douto e ciente,<br>
+                    Da Lácia, Grega, ou Bárbara nação,<br>
+                    Senão da Portuguesa tão somente.<br>
+                    Sem vergonha o não digo, que a razão<br>
+                    De algum não ser por versos excelente,<br>
+                    É não se ver prezado o verso e rima,<br>
+                    Porque, quem não sabe arte, não na estima."</p>
+                    <button onclick="toggleDisplay('analysis1')">Análise</button>
+                    <div class="analysis" id="analysis1">
+                        <button onclick="toggleDisplay('esquema1')">Recursos Expressivos</button>
+                        <div id="esquema1" class="general-content">
+                            <p>"Enfim, não houve forte capitão,<br>
+                                Que não fosse também douto e ciente,<br>
+                                <u><span style="color: red;">Da Lácia, Grega, ou Bárbara nação</span></u> = <span style="color: red;">Enumeração</span><br>
+                                Senão da Portuguesa tão somente.<br>
+                                Sem vergonha o não digo, que a razão<br>
+                                De algum não ser por versos excelente,<br>
+                                É não se ver prezado o verso e rima,<br>
+                                Porque, quem não sabe arte, não na estima."</p>
+                        </div>
+                        <button onclick="toggleDisplay('planos1')">Planos</button>
+                        <div id="planos1" class="general-content">
+                            <p><span style="color: blue;">Considerações do poeta.</span><br>
+                                O poeta faz as suas considerações sobre o desprezo que os portugueses têm sobre as letras<br><br>
+                                (Versos 7 e 8) <br><u> "não se ver prezado o verso e rima,<br>
+                                Porque, quem não sabe arte, não na estima."</u>
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('silabas1')">Silabas Métricas</button>
+                        <div id="silabas1" class="general-content">
+                            <p>En|fim |não |hou|ve |for|te |ca|pi|tão
+                                <br>&nbsp1 &nbsp &nbsp 2 &nbsp &nbsp 3 &nbsp&nbsp&nbsp 4 &nbsp&nbsp &nbsp5 &nbsp&nbsp6 &nbsp&nbsp7 &nbsp&nbsp8 &nbsp9 &nbsp10
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('explicacao1')">Explicação da estrofe</button>
+                        <div id="explicacao1" class="general-content">
+                            <p>A estrofe 97 do Canto V de "Os Lusíadas" revela a crítica de Camões à falta de reconhecimento e apoio à poesia em Portugal. Ele contrasta a situação cultural portuguesa com a valorização dos poetas em outras nações, lamentando que muitos poetas talentosos não sejam devidamente apreciados na sua própria terra. A ironia de Camões ao afirmar que não há vergonha em dizer a verdade destaca a sua franqueza e sua crítica social à falta de prestígio dos poetas portugueses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stanza">
+                    <h3>V, 98</h3>
+                    <p>"Por isso, e não por falta de natura,<br>
+                    Não há também Virgílios nem Homeros;<br>
+                    Nem haverá, se este costume dura,<br>
+                    Pios Eneias, nem Aquiles feros.<br>
+                    Mas o pior de tudo é que a ventura<br>
+                    Tão ásperos os fez, e tão austeros,<br>
+                    Tão rudos, e de engenho tão remisso,<br>
+                    Que a muitos lhe dá pouco, ou nada disso."</p>
+                    <button onclick="toggleDisplay('analysis2')">Análise</button>
+                    <div class="analysis" id="analysis2">
+                        <button onclick="toggleDisplay('esquema2')">Recursos Expressivos</button>
+                        <div id="esquema2" class="general-content">
+                            <p>"Por isso, e não por falta de natura,<br>
+                                Não há também Virgílios nem Homeros;<br>
+                                Nem haverá, se este costume dura,<br>
+                                Pios Eneias, nem Aquiles feros.<br>
+                                Mas o pior de tudo é que a ventura<br>
+                                <u><span style="color: red">Tão</span></u> ásperos os fez, e tão austeros,<br>
+                                <u><span style="color: red">Tão</span></u> rudos, e de engenho tão remisso,<br>
+                                Que a muitos lhe dá pouco, ou nada disso." <br><br>
+                                O <u><span style="color: red">"Tão"</span></u> é uma <span style="color: red">anáfora</span> pois repete-se no início da frase
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('planos2')">Planos</button>
+                        <div id="planos2" class="general-content">
+                            <p><span style="color: blue;">Considerações do poeta.</span><br>
+                                Camões faz uma reflexão sobre a ausência de grandes poetas (como Virgílio e Homero) e heróis épicos (como Eneias e Aquiles) em Portugal, não por falta de talento natural, mas por outras condições adversas. Ele critica a sociedade do seu tempo, que, segundo ele, tornou as pessoas rudes, prejudicando o desenvolvimento do engenho e da criatividade.<br><br>
+                                (Versos 2, 3 e 4) <br><u> "Não há também Virgílios nem Homeros;<br>
+                                    Nem haverá, se este costume dura,<br>
+                                    Pios Eneias, nem Aquiles feros.</u>
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('silabas2')">Silabas Métricas</button>
+                        <div id="silabas2" class="general-content">
+                            <p>Por |isso |e |não |por |fal|ta |de |na|tu<span style="color: red">|ra </span>
+                                <br>&nbsp &nbsp1  &nbsp &nbsp 2 &nbsp &nbsp 3 &nbsp&nbsp 4 &nbsp&nbsp &nbsp5 &nbsp&nbsp&nbsp6 &nbsp&nbsp7 &nbsp&nbsp8 &nbsp&nbsp9 &nbsp10 <span style="color: red">&nbsp11</span>
+                                <br><br>*Retira-se o "ra" pois a contagem termina sempre na última silaba tónica, que neste caso é "tu"*
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('explicacao2')">Explicação da estrofe</button>
+                        <div id="explicacao2" class="general-content">
+                            <p>A estrofe 98 expressa a frustração de Camões com a falta de grandes poetas épicos em Portugal, comparando a situação com a Grécia e Roma antigas. Ele critica a falta de reconhecimento e apoio à poesia no seu país, lamentando que as circunstâncias adversas tenham produzido poetas menos ilustres. Camões reflete sobre como a falta de incentivo cultural pode impedir o surgimento de talentos literários significativos, evidenciando a sua tristeza diante das dificuldades enfrentadas pelos poetas em seu tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stanza-container">
+                <div class="stanza">
+                    <h3>V, 99</h3>
+                    <p>"Às Musas agardeça o nosso Gama<br>
+                    o Muito amor da Pátria, que as obriga<br>
+                    A dar aos seus na lira nome e fama<br>
+                    De toda a ilustro e bélica fadiga:<br>
+                    Que ele, nem quem na estirpe seu se chama,<br>
+                    Calíope não tem por tão amiga,<br>
+                    Nem as filhas do Tejo, que deixassem<br>
+                    As telas douro fino, e que o cantassem."</p>
+                    <button onclick="toggleDisplay('analysis3')">Análise</button>
+                    <div class="analysis" id="analysis3">
+                        <button onclick="toggleDisplay('esquema3')">Recursos Expressivos</button>
+                        <div id="esquema3" class="general-content">
+                            <p>"Às Musas agardeça o nosso Gama<br>
+                                o Muito amor da Pátria, que as obriga<br>
+                                A dar aos seus na lira nome e fama<br>
+                                De toda a <u><span style="color: red">ilustro</span></u> e <u><span style="color: red">bélica</span></u> fadiga: = <span style="color: red">Dupla Adjetivação</span><br>
+                                Que ele, nem quem na estirpe seu se chama,<br>
+                                Calíope não tem por tão amiga,<br>
+                                Nem as filhas do Tejo, que deixassem<br>
+                                As telas douro fino, e que o cantassem."</p>
+                        </div>
+                        <button onclick="toggleDisplay('planos3')">Planos</button>
+                        <div id="planos3" class="general-content">
+                            <p><span style="color: blue;">Plano Mitológico.</span><br>
+                                A estrofe invoca as Musas, que são figuras mitológicas gregas responsáveis por inspirar a arte e a poesia. A Calíope, mencionada especificamente, é a musa da poesia épica.<br><br>
+                                (Versos 1, 6 e 7) <br><u>    
+                                    "Às <span style="color: blue;">Musas</span> agardeça o nosso Gama"<br>
+                                    "<span style="color: blue;">Calíope</span> não tem por tão amiga,"<br>
+                                    "Nem as <span style="color: blue;">filhas do Tejo</span>, que deixassem"
+                                </u>
+                            </p>                        
+                        </div>
+                        <button onclick="toggleDisplay('silabas3')">Silabas Métricas</button>
+                        <div id="silabas3" class="general-content">
+                            <p>Às |Mu|sas |a|gar|de|ça o |no|sso |Ga<span style="color: red">|ma</span>
+                                <br> &nbsp1  &nbsp &nbsp 2 &nbsp &nbsp 3 &nbsp4 &nbsp &nbsp5 &nbsp&nbsp6 &nbsp&nbsp&nbsp&nbsp7 &nbsp&nbsp&nbsp8 &nbsp&nbsp&nbsp9 &nbsp&nbsp&nbsp10 <span style="color: red">&nbsp11</span>
+                                <br><br>*"ça o" junta porque são duas vogais*
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('explicacao3')">Explicação da estrofe</button>
+                        <div id="explicacao3" class="general-content">
+                            <p>A estrofe 99 do Canto V reflete o respeito de Camões às divindades inspiradoras da arte e da poesia. Ele agradece às Musas pelo seu papel crucial na celebração dos feitos dos lusitanos, especialmente de Vasco da Gama. Camões destaca a importância da poesia épica e da inspiração divina na preservação da memória histórica e cultural de Portugal. Essa estrofe ilustra uma conexão de Camões com a tradição clássica e mitológica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stanza">
+                    <h3>V, 100</h3>
+                    <p>"Porque o amor fraterno e puro gosto<br>
+                    De dar a todo o Lusitano feito<br>
+                    Seu louvor, é somente o pressuposto<br>
+                    Das Tágides gentis, e seu respeito.<br>
+                    Porém não deixe enfim de ter disposto<br>
+                    Ninguém a grandes obras sempre o peito,<br>
+                    Que por esta, ou por outra qualquer via,<br>
+                    Não perderá seu preço, e sua valia."</p>
+                    <button onclick="toggleDisplay('analysis4')">Análise</button>
+                    <div class="analysis" id="analysis4">
+                        <button onclick="toggleDisplay('esquema4')">Recursos Expressivos</button>
+                        <div id="esquema4" class="general-content">
+                            <p>"Porque o amor <u><span style="color: red">fraterno</span></u> e <u><span style="color: red">puro</span></u> gosto<br>
+                                De dar a todo o Lusitano feito<br>
+                                Seu louvor, é somente o pressuposto<br>
+                                Das Tágides gentis, e seu respeito.<br>
+                                Porém não deixe enfim de ter disposto<br>
+                                Ninguém a grandes obras sempre o peito,<br>
+                                Que por esta, ou por outra qualquer via,<br>
+                                Não perderá seu preço, e sua valia."<br><br>
+                                <u><span style="color: red">"fraterno"</span></u> e <u><span style="color: red">"puro"</span></u> são ambos adjetivos logo o recurso expressivo é <span style="color: red">Dupla Adjetivação</span>
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('planos4')">Planos</button>
+                        <div id="planos4" class="general-content">
+                            <p><span style="color: blue;">Considerações do poeta.</span><br>
+                                Camões reflete sobre o amor à pátria e a importância de louvar os feitos dos lusitanos, além de incentivar a persistência nas grandes obras.<br><br>
+                                (Versos 1, 2, 6 e 8) <br><u> "Porque o amor fraterno e puro gosto"<br>
+                                    "De dar a todo o Lusitano feito"<br>
+                                    "Ninguém a grandes obras sempre o peito,"<br>
+                                    "Não perderá seu preço, e sua valia."</u>
+                            </p>                        
+                        </div>
+                        <button onclick="toggleDisplay('silabas4')">Silabas Métricas</button>
+                        <div id="silabas4" class="general-content">
+                            <p>Por|que |o a|mor |fra|ter|no e |pu|ro |gos<span style="color: red">|to</span>
+                                <br> &nbsp&nbsp1  &nbsp &nbsp 2 &nbsp &nbsp 3  &nbsp&nbsp &nbsp4 &nbsp&nbsp &nbsp5 &nbsp&nbsp6  &nbsp&nbsp&nbsp&nbsp7  &nbsp&nbsp&nbsp&nbsp8 &nbsp&nbsp9 &nbsp&nbsp10 <span style="color: red">&nbsp11</span>
+                            </p>
+                        </div>
+                        <button onclick="toggleDisplay('explicacao4')">Explicação da estrofe</button>
+                        <div id="explicacao4" class="general-content">
+                            <p>A estrofe 100 do Canto V enfatiza o amor à pátria e a importância de louvar os feitos dos lusitanos. Camões incentiva a persistência nas grandes obras, garantindo que estas sempre terão valor e significado, independentemente do caminho escolhido para realizá-las. Ele destaca a inspiração das Tágides (ninfas do rio Tejo) e das Musas na poesia que celebra a história de Portugal. Essa estrofe não apenas encoraja o patriotismo e a cultura literária, mas também reflete a visão de Camões sobre a importância da arte na preservação da identidade nacional..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="conclusion" class="content-section">
+                <h2>Conclusão</h2>
+                <button onclick="toggleDisplay('conclusionlusiadas')">Ver Conclusão sobre os Lusíadas</button>
+                <div id="conclusionlusiadas" class="general-content">
+                    <p><b>Conclusão Geral das Estrofes 97, 98, 99 e 100 do Canto V de "Os Lusíadas"</b><br>
+                        <br>As estrofes 97, 98, 99 e 100 do Canto V de "Os Lusíadas" refletem a profunda crítica de Luís de Camões à falta de reconhecimento e valorização da poesia e dos poetas em Portugal, em contraste com outras nações que celebraram os seus talentos literários. Camões lamenta a ausência de grandes poetas épicos portugueses, como Virgílio e Homero, devido à falta de incentivo cultural e apreciação pela arte.<br>
+                        <br>Na sua "crítica", Camões também reconhece e agradece às Musas e às Tágides pela sua inspiração divina, crucial para a celebração dos feitos lusitanos, especialmente as conquistas de Vasco da Gama. Ele ressalta a importância da poesia épica na preservação da memória histórica e cultural de Portugal, evidenciando a sua profunda conexão com a tradição clássica e mitológica.<br>
+                        <br>Por fim, Camões encoraja a persistência nas grandes obras e a manutenção do patriotismo e do amor à pátria. Ele garante que, independentemente do caminho escolhido, as grandes obras sempre terão valor e significado. A sua mensagem é um apelo à valorização da arte e da cultura como elementos essenciais para a identidade nacional e a celebração dos feitos heroicos dos portugueses.<br>
+                        <br>Em suma, essas estrofes são uma combinação de crítica social, reconhecimento da inspiração divina e incentivo ao patriotismo, refletindo a visão de Camões sobre a importância da poesia e da memória cultural na história de Portugal.</p>
+                </div>
+                <button onclick="toggleDisplay('divisaotarefas')">Divisão das tarefas</button>
+                <div id="divisaotarefas" class="general-content">
+                    <button onclick="toggleDisplay('rodrigoviana')">Rodrigo Viana</button>
+                    <div id="rodrigoviana" class="general-content">
+                        <p>Realização do site, botões, headers, etc(com auxilio do Soblirov), realização dos planos e da explicação das estrofes nos versos 97,98,99 e 100, divisão de tarefas e parte da conclusão</p>
+                    </div>
+                    <button onclick="toggleDisplay('inescampos')">Ines Campos</button>
+                    <div id="inescampos" class="general-content">
+                        <p>Filtrar Informação, procurar vida e contexto histórico de Camões, silabas metricas das estrofes 97 e 98, esquema rimático geral e recursos expressivos da 97 e 98 </p>
+                    </div>
+                    <button onclick="toggleDisplay('filipesoblirov')">Filipe Soblirov</button>
+                    <div id="filipesoblirov" class="general-content">
+                        <p>realização da Informação completa(introdução), realização dos versos na info geral, realização dos recursos expressivos e silabas métricas na estância 100, parte da conclusão, e auxilio no codigo</p>
+                    </div>
+                    <button onclick="toggleDisplay('leonardofernandes')">Leonardo Fernandes</button>
+                    <div id="leonardofernandes" class="general-content">
+                        <p>Aventuras, Os Lusiadas, Poesia lírica(na Introdução), estâncias e versos no geral e realização dos recursos expressivos e silabas métricas no verso 99 </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>

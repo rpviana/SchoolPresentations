@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Impede o scroll na página */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Impede o scroll lateral */
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    color: black; /* Cor padrão do ícone */
+    transition: color 0.3s ease;
+}
+
+.menu-toggle.open {
+    color: white; /* Muda para branco quando o menu está aberto */
+}
+
+.menu {
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -20%;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.menu.show {
+    left: 0;
+}
+
+.menu h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza a palavra "Menu" */
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin-bottom: 15px;
+}
+
+.menu ul li button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li button:hover {
+    background-color: #555;
+}
+
+.content {
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    overflow-y: hidden; /* Impede o scroll vertical */
+    transition: margin-left 0.3s ease;
+}
+
+.content.with-menu {
+    margin-left: 20%;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.presentation h1 {
+    font-size: 3em;  /* Aumenta o tamanho do título da página */
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;  /* Título dos tópicos (menor que h1) */
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+    color: #333;
+}
+
+p, 
+.slide ul li {
+    font-size: 1.5em;  /* Tamanho do corpo do texto */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;  /* Alinha o texto à esquerda */
+}
+
+/* Estilo comum para Características e Aplicações */
+.slide.caracteristicas ul li,
+.slide.aplicacoes ul li {
+    font-size: 1.2em;  /* Tamanho menor para os tópicos */
+}
+
+.slide.caracteristicas ul li strong,
+.slide.aplicacoes ul li strong {
+    font-size: 1.5em;  /* Título dos tópicos com tamanho menor */
+}
+
+/* Títulos das seções centralizados */
+.slide h2 {
+    text-align: center;  /* Centraliza os títulos Características e Aplicações */
+}
+
+.slide {
+    display: none; /* Esconde todos os slides inicialmente */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    height: 100%; /* Cada slide ocupa a tela inteira */
+    padding: 20px;
+}
+
+.slide.active {
+    display: flex; /* Apenas o slide ativo será mostrado */
+}
+
+img {
+    width: 1000px; /* Aumenta significativamente o tamanho das imagens */
+    height: auto; /* Mantém a proporção da altura */
+    margin: 20px auto 0; /* Centraliza horizontalmente e adiciona espaço acima */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para os tópicos */
+.slide ul {
+    list-style: none;  /* Remove as bolinhas */
+    padding: 0;
+    text-align: left;  /* Alinha os tópicos à esquerda */
+}
+
+p {
+    font-size: 1.5em;  /* Aumenta o tamanho do texto padrão */
+    line-height: 1.6;
+    margin-bottom: 20px;  /* Espaçamento maior entre os parágrafos */
+    text-align: left;  /* Alinha o texto à esquerda */
+}
+
+/* Estilo específico para a História do Elemento */
+.historia {
+    font-size: 1.5em; /* Ajuste o tamanho conforme necessário */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espaçamento entre as partes */
+    text-align: left; /* Alinhado à esquerda */
+}
+
+.historia strong {
+    font-weight: bold; /* Títulos em negrito */
+    font-size: 1.8em; /* Aumenta o tamanho dos títulos */
+}
+
+/* Estilo para as Aplicações do elemento */
+.aplicacoes {
+    font-size: 1.2em; /* Mesmo tamanho de texto que as Características */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espaçamento entre as partes */
+    text-align: left; /* Alinhado à esquerda */
+}
+
+.aplicacoes strong {
+    font-size: 1.5em; /* Mesmo tamanho de título que nas Características */
+    font-weight: bold; /* Negrito para os títulos */
+}

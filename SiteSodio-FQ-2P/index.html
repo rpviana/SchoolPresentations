@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: Sódio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Botão para abrir/fechar o menu -->
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"> 
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </div>
+
+        <!-- Menu lateral -->
+        <div class="menu" id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><button onclick="showSlide(0)">Nome do Elemento</button></li>
+                <li><button onclick="showSlide(1)">Símbolo Químico</button></li>
+                <li><button onclick="showSlide(2)">Número Atômico</button></li>
+                <li><button onclick="showSlide(3)">Número de Massa</button></li>
+                <li><button onclick="showSlide(4)">Isótopos do Elemento</button></li>
+                <li><button onclick="showSlide(5)">Cartão Completo</button></li>
+                <li><button onclick="showSlide(6)">História do Elemento</button></li>
+                <li><button onclick="showSlide(7)">Aplicações do Elemento</button></li>
+                <li><button onclick="showSlide(8)">Características/Curiosidades do Elemento</button></li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="content">
+            <!-- Mensagem de Apresentação Inicial (removida) -->
+            <div class="presentation" style="display: none;">
+                <h1>Apresentação sobre o Sódio</h1>
+            </div>
+
+            <!-- Slide 1: Nome do Elemento -->
+            <div class="slide active">
+                <h2>Nome do Elemento: Sódio</h2>
+                <p>O sódio é um elemento químico com o número atômico 11. É um metal alcalino, altamente reativo, e é encontrado na natureza.</p>
+                <img src="img/Nome_do_Elemento__1_-removebg-preview.png" alt="Sódio" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 2: Símbolo Químico -->
+            <div class="slide">
+                <h2>Símbolo Químico: Na</h2>
+                <p>O símbolo químico do sódio é "Na", ele vem do latim "Natrium". Este elemento é conhecido pela sua reatividade e é bastante utilizado na indústria.</p>
+                <img src="img/Nome_do_Elemento__2_-removebg-preview.png" alt="Sódio1" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 3: Número Atômico -->
+            <div class="slide">
+                <h2>Número Atômico: 11</h2>
+                <p>O número atômico do sódio é 11, o que significa que ele possui 11 prótons no seu núcleo. Isso determina as suas propriedades químicas e a sua posição na tabela periódica.</p>
+                <img src="img/Nome_do_Elemento__3_-removebg-preview (1).png" alt="Sódio2" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 4: Número de Massa -->
+            <div class="slide">
+                <h2>Número de Massa: Aproximadamente 23</h2>
+                <p>O número de massa do sódio é aproximadamente 23, o que se refere à soma dos prótons e nêutrons do seu núcleo.</p>
+                <img src="img/Nome_do_Elemento__4_-removebg-preview.png" alt="Sódio3" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 5: Isótopos do Elemento -->
+            <div class="slide">
+                <h2>Isótopos do Elemento</h2>
+                <p>O sódio possui um isótopo estável, o sódio-23. Outros isótopos, como o sódio-22, são radioativos e têm aplicações na medicina e na pesquisa científica.</p>
+                <img src="img/Nome_do_Elemento__5_-removebg-preview.png" alt="Sódio4" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 6: Cartão Completo -->
+            <div class="slide">
+                <h2>Cartão Completo</h2>
+                <img src="img/tudo.png" alt="Sódio5" style="display: block; margin: auto;">
+            </div>
+
+            <!-- Slide 7: História do Elemento -->
+            <div class="slide history">
+                <h2>História do Elemento</h2>
+                <p>O sódio foi descoberto em <strong>1807</strong> pelo químico inglês <strong>Humphry Davy</strong>. Ele isolou o sódio pela primeira vez utilizando o processo de <strong>eletrólise</strong>, que permitiu a separação dos elementos químicos. Esta descoberta teve um <strong>impacto significativo</strong> na química dos metais alcalinos e na compreensão dos elementos.</p>
+            </div>
+
+            <!-- Slide 8: Aplicações do Elemento -->
+            <div class="slide aplicacoes">
+                <h2>Aplicações do Elemento</h2>
+                <ul>
+                    <li><strong>Indústria Química:</strong> O sódio metálico é utilizado na fabricação de compostos como hidróxido de sódio (soda cáustica) e peróxido de sódio.</li>
+                    <li><strong>Produção de Sabões e Detergentes:</strong> Sais de sódio, como o lauril sulfato de sódio, são ingredientes comuns em produtos de limpeza.</li>
+                    <li><strong>Processos Biológicos:</strong> Essencial para o funcionamento dos sistemas nervoso e muscular, sendo fundamental na transmissão de impulsos nervosos.</li>
+                    <li><strong>Indústria Alimentícia:</strong> O cloreto de sódio (sal de cozinha) é bastante utilizado na conservação de alimentos.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 9: Características/Curiosidades do Elemento -->
+            <div class="slide aplicacoes">
+                <h2 style="text-align:center">Características/Curiosidades do Elemento</h2>
+                <ul>
+                    <li><strong>Metal Leve:</strong> O sódio é um metal muito leve, com densidade inferior à da água.</li>
+                    <li><strong>Reatividade:</strong> Extremamente reativo, especialmente com água, resultando em uma reação violenta que produz gás hidrogénio e calor.</li>
+                    <li><strong>Essencial para a Vida:</strong> O sódio desempenha um papel crucial na manutenção do equilíbrio de fluidos e na regulação da pressão arterial no corpo humano.</li>
+                    <li><strong>Transmissão de Impulsos Nervosos:</strong> Ajuda na propagação de impulsos eléctricos entre as células nervosas, sendo vital para o sistema nervoso.</li>
+            </div>
+        </div>
+    
+        <script src="js/script.js"></script>
+    </body>
+</html>
+    

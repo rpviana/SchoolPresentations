@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    color: black; /* Cor padrão do ícone */
+    transition: color 0.3s ease;
+}
+
+.menu-toggle.open {
+    color: white; /* Muda para branco quando o menu está aberto */
+}
+
+.menu {
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -20%;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.menu.show {
+    left: 0;
+}
+
+.menu h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza a palavra "Menu" */
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin-bottom: 15px;
+}
+
+.menu ul li button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li button:hover {
+    background-color: #555;
+}
+
+.content {
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
+}
+
+.content.with-menu {
+    margin-left: 20%;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.presentation h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.slide {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+

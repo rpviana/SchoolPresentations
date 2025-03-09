@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main.py</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>main.py</h1>
+        <p>Análise do código e o que ele faz</p>
+    </header>
+    <main>
+        <div class="description-container">
+            <h2 style="display: block; text-align: center;">Introdução</h2>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 10px;">
+                    O código em <code>main.py</code> é responsável por iniciar e controlar o fluxo principal do jogo. Ele começa por importar as bibliotecas necessárias, como <code>colorama</code> para cores no terminal, <code>getpass</code> para o "enter", e outras específicas para o controlar as naves e tabuleiro do jogo.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função <code>limpar_tela</code> é usada para limpar o terminal antes de exibir qualquer nova informação, proporcionando uma interface mais limpa e organizada para o player.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função <code>capa</code> exibe a introdução gráfica do jogo, dando as boas-vindas ao jogador com um texto bonito feito exclusivamente por mim. Antes de exibir a capa, a tela é limpa para garantir que o jogo comece com uma interface limpa e profissional.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função <code>obter_input_valido</code> é uma função auxiliar que garante que o jogador insira uma resposta válida para as perguntas feitas no jogo. Se a entrada do jogador for inválida, a função continua a pedir até que a resposta esteja dentro dos parâmetros esperados.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função <code>colorir_letra</code> aplica uma cor específica à letra de cada nave, utilizando um dicionário para associar letras a cores. Isso permite uma exibição mais colorida e diferenciada das naves no tabuleiro.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função <code>iniciar_jogo</code> é o coração do jogo. Ela configura as naves e o tabuleiro, e permite ao jogador escolher o modo de jogo (manual ou automático). Dependendo da escolha, o jogo começa com diferentes configurações, e o fluxo do jogo é controlado através dessa função principal.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    As naves são representadas como objetos da classe <code>NaveExtra</code>, e o tabuleiro é controlado através da classe <code>Tabuleiro</code>. O jogo permite ao jogador interagir com as naves e realizar ações, dependendo das escolhas feitas durante o jogo.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Em resumo, o código de <code>main.py</code> organiza a estrutura básica do jogo, controlando o início do jogo, a interação com o jogador, e a execução das diferentes etapas do jogo, como configuração das naves, escolha de tabuleiro, controle do modo de jogo, etc....
+                </li>
+            </ul>                                                                                                 
+        </div>    
+        <div class="code-container">
+            <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+            <pre><code id="code-block">
+#LINHA 38 À 43
+def obter_input_valido(prompt, opcoes_validas):
+    while True:  # Loop infinito até o jogador escolher algo válido
+        valor = input(prompt).strip().upper()  # Pede input, remove espaços e põe em maiúsculas
+        if valor in opcoes_validas:  # Verifica se é válido
+            return valor  # Se for, devolve o valor
+        print(f"Opção inválida! Escolha entre: {', '.join(opcoes_validas)}")  # Se não, manda isso
+</code></pre>
+        </div>
+        <div class="description-container">
+            <h2>Descrição</h2>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 10px;">
+                    Este trecho de código define a função <code>obter_input_valido</code>,  
+                    que garante que o jogador meta uma opção válida antes de continuar.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função recebe uma mensagem para exibir ao jogador e a lista de opções permitidas.  
+                    Utiliza um loop que continua a pedir input até que uma escolha válida seja feita.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O valor inserido é convertido para maiúsculas e tem espaços desnecessários removidos  
+                    para evitar erros de formatação.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Caso a entrada seja inválida, o código exibe uma mensagem a informar as opções corretas.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Usei chatGPT para o <code>join</code> e o <code>strip()</code>.</strong>
+                </li>
+            </ul>
+        </div>
+        <div class="code-container">
+            <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+            <pre><code id="code-block">
+#LINHA 46 À 48
+def colorir_letra(letra):
+    cores = {"R": Fore.MAGENTA, "V": Fore.RED, "A": Fore.BLUE}  # Define cores para cada letra
+    return f"{cores.get(letra, Fore.WHITE)}{letra}{Fore.RESET}"  # Aplica a cor correspondente
+</code></pre>
+        </div>
+        <div class="description-container">
+            <h2>Descrição</h2>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 10px;">
+                    Este trecho de código define a função <code>colorir_letra</code>,  
+                    que aplica uma cor específica a uma letra com base no seu valor.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O dicionário <code>cores</code> mapeia letras para cores do módulo <code>colorama</code>.  
+                    As letras "R", "V" e "A" são associadas a cores específicas:
+                    <ul>
+                        <li><code>R</code> → Magenta/Roxo</li>
+                        <li><code>V</code> → Vermelho</li>
+                        <li><code>A</code> → Azul</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função utiliza o método <code>get</code> do dicionário para verificar se a letra está presente  
+                    nas opções definidas. Caso contrário, aplica a cor padrão (branco).
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Após encontrar a cor correspondente, a letra é retornada com a formatação de cor aplicada.  
+                    A cor é resetada após a letra para garantir que o terminal não fique colorido após o texto.
+                </li>
+            </ul>                        
+        </div>
+        <div class="code-container">
+            <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+            <pre><code id="code-block">
+#LINHA 51 À 179
+def iniciar_jogo():
+    limpar_tela()  # Começa limpando a tela
+
+    # Criação das naves com características específicas
+    naves = [
+        NaveExtra("Nave1", "Rosa", 5, "R", 20),  # Nave rosa, com energia extra e menor perda
+        NaveExtra("Nave2", "Vermelho", 7, "V", 25),  # Nave vermelha, intermediária
+        NaveExtra("Nave3", "Azul", 10, "A", 30)  # Nave azul, mais resistente
+    ]
+
+    tiros_certeiros, num_tiros = 0, 0  # Contadores para o número de tiros certeiros e totais
+
+    # Escolha do modo de jogo
+    print("Escolha o modo de jogo:")
+    print("1. Tiros controlados pelo jogador")  # Modo manual
+    print("2. Tiros aleatórios")  # Modo automático
+    modo = obter_input_valido("Digite o número do modo escolhido (1 ou 2): ", ["1", "2"])
+
+    # Escolha do tipo de tabuleiro
+    print("Escolha o tipo de tabuleiro:")
+    print("1. Tabuleiro Normal")
+    print("2. Tabuleiro em Forma de Pirâmide")
+
+    while True:  # Valida a escolha do tabuleiro
+        escolha_tabuleiro = input("Digite o número do tabuleiro escolhido: ")
+        if escolha_tabuleiro == "1":
+            tipo_tabuleiro = "normal"  # Tabuleiro básico
+            break
+        elif escolha_tabuleiro == "2":
+            tipo_tabuleiro = "piramide"  # Tabuleiro em piramede
+            break
+        else:
+            print("Opção inválida. Escolha 1 ou 2.")  # Mensagem de erro
+
+    tabuleiro = Tabuleiro(tipo=tipo_tabuleiro)  # Cria o tabuleiro com o tipo escolhido
+
+    # Loop principal do jogo
+    while num_tiros < 105:  # Jogo termina após 105 tiros
+        limpar_tela()  # Limpa a tela a cada ronda
+
+        naves_posicoes = {}  # Dicionário para guardar as posições das naves
+        for nave in naves:  # Posiciona cada nave no tabuleiro
+            if nave.energia > 0:  # Só posiciona se a nave ainda tiver energia
+                while True:  # Garante que a posição seja única
+                    pos = tabuleiro.posicionar_aleatorio()  # Gera posição aleatória
+                    if pos not in naves_posicoes:  # Verifica se já está ocupada
+                        naves_posicoes[pos] = colorir_letra(nave.letra)  # Adiciona ao tabuleiro
+                        break
+
+        tiros_posicoes = {}  # Dicionário para guardar os tiros realizados
+
+        tiros_realizados = 0  # Reseta o contador de tiros na ronda
+        while tiros_realizados < 3:  # Limita a 3 tiros por ronda
+            if modo == "1":  # Modo manual
+                linha = int(obter_input_valido("Escolha a linha (1, 2 ou 3): ", ["1", "2", "3"]))
+                coluna = obter_input_valido("Escolha a coluna (A, B, C, D, E): ", ["A", "B", "C", "D", "E"])
+                tiro = (linha, coluna)  # Combina linha e coluna
+            else:  # Modo automático
+                tiro = tabuleiro.posicionar_aleatorio()  # Gera tiro aleatório
+
+            if tiro not in tiros_posicoes:  # Verifica se a posição já foi usada
+                tiros_posicoes[tiro] = "X"  # Marca o tiro
+                tiros_realizados += 1  # Incrementa o contador de tiros
+                num_tiros += 1  # Incrementa o contador total
+
+            for posicao, letra in list(naves_posicoes.items()):  # Verifica se o tiro acertou
+                if posicao == tiro:
+                    for nave in naves:
+                        if nave.letra in letra:
+                            nave.perder_energia()  # Reduz energia da nave
+                            if nave.energia == 0:  # Remove a nave se a energia acabar
+                                del naves_posicoes[posicao]
+                            tiros_certeiros += 1  # Incrementa o contador de acertos
+
+        # Mostra o estado atual do jogo
+        print(f"Ronda {num_tiros // 3 + 1}")
+        tabuleiro.desenhar(naves_posicoes, tiros_posicoes)  # Desenha o tabuleiro
+
+        print("\nEstado das Naves:")
+        for nave in naves:  # Mostra os dados de cada nave
+            print(nave.mostrar_dados())
+
+        print(f"\nTotal de tiros: {num_tiros}")  # Total de tiros realizados
+        print(f"Tiros certeiros: {tiros_certeiros}")  # Total de acertos
+        print(f"Eficácia: {tiros_certeiros * 100 / num_tiros:.2f}%")  # Percentual de eficácia
+
+        if num_tiros == 45:  # energia extra após 45 tiros
+            print(Fore.CYAN + """
+
+▄███▄      ▄   ▄███▄   █▄▄▄▄   ▄▀  ▄█ ██       ▄███▄      ▄     ▄▄▄▄▀ █▄▄▄▄ ██   
+█▀   ▀      █  █▀   ▀  █  ▄▀ ▄▀    ██ █ █      █▀   ▀ ▀▄   █ ▀▀▀ █    █  ▄▀ █ █  
+██▄▄    ██   █ ██▄▄    █▀▀▌  █ ▀▄  ██ █▄▄█     ██▄▄     █ ▀      █    █▀▀▌  █▄▄█ 
+█▄   ▄▀ █ █  █ █▄   ▄▀ █  █  █   █ ▐█ █  █     █▄   ▄▀ ▄ █      █     █  █  █  █ 
+▀███▀   █  █ █ ▀███▀     █    ███   ▐    █     ▀███▀  █   ▀▄   ▀        █      █ 
+        █   ██          ▀               █              ▀               ▀      █  
+                                       ▀                                     ▀   
+""" + Fore.RESET)
+            for nave in naves:
+                nave.adicionar_energia_extra()  # Adiciona energia extra às naves
+
+        if num_tiros >= 105:  # Fim do jogo após 105 tiros
+            print(Fore.YELLOW + """
+
+██████╗ ███████╗██████╗ ██████╗ ███████╗███████╗████████╗███████╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔════╝
+██████╔╝█████╗  ██████╔╝██║  ██║█████╗  ███████╗   ██║   █████╗  
+██╔═══╝ ██╔══╝  ██╔══██╗██║  ██║██╔══╝  ╚════██║   ██║   ██╔══╝  
+██║     ███████╗██║  ██║██████╔╝███████╗███████║   ██║   ███████╗ ██╗
+╚═╝     ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚══════╝
+                                                                 
+""" + Fore.RESET)
+            break
+
+        if all(nave.energia == 0 for nave in naves):  # Fim do jogo se todas as naves forem destruídas
+            print(Fore.GREEN + """
+██    ██ ███████ ███    ██  ██████ ███████ ███████ ████████ ███████ 
+██    ██ ██      ████   ██ ██      ██      ██         ██    ██      
+██    ██ █████   ██ ██  ██ ██      █████   ███████    ██    █████   
+ ██  ██  ██      ██  ██ ██ ██      ██           ██    ██    ██      
+  ████   ███████ ██   ████  ██████ ███████ ███████    ██    ███████  ██ 
+                                                                    
+                                                                    
+""" + Fore.RESET)
+            break
+
+        getpass("Pressione Enter para continuar para a próxima ronda...")  # Pausa antes da próxima ronda
+
+# Inicia o jogo
+iniciar_jogo()
+
+</code></pre>
+        </div>
+        <div class="description-container">
+            <h2>Descrição</h2>
+            <ul style="padding-left: 20px;">
+                <li style="margin-bottom: 10px;">
+                    Esta parte do código define a função <code>iniciar_jogo</code>, que inicia o jogo, configurando as naves, o modo de jogo, o tabuleiro e controlando basicamente o jogo.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função começa com a limpeza da tela utilizando <code>limpar_tela()</code>.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A seguir, são criadas três naves com características distintas, utilizando a classe <code>NaveExtra</code>. 
+                    Cada nave tem um nome, cor, quantidade de energia, letra que identifica a nave e um valor associado à mesma.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O código inicializa dois contadores: <code>tiros_certeiros</code> e <code>num_tiros</code>, ambos definidos como zero, para contar os acertos e os tiros totais.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    A função então pede ao jogador para escolher entre dois modos de jogo: manual ou automático.  
+                    A escolha é feita utilizando a função <code>obter_input_valido</code> que garante a validação da entrada.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O jogador também escolhe o tipo de tabuleiro, que pode ser "normal" ou "piramide". A escolha é validada num loop <code>while</code> até que uma opção válida seja fornecida.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Um tabuleiro é então criado com base na escolha do jogador, utilizando a classe <code>Tabuleiro</code> e passando para o tipo de tabuleiro escolhido.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O código entra no loop principal do jogo, onde o número de tiros é limitado a 105. 
+                    Dentro desse loop, as naves são posicionadas aleatoriamente no tabuleiro, e o código verifica se a posição da nave já está ocupada.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Outro loop <code>while</code> é usado para controlar o número de tiros por ronda, que é limitado a 3. 
+                    O jogador escolhe a linha e a coluna do tiro no modo manual, ou o tiro é gerado aleatoriamente no modo automático.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Após o tiro ser realizado, o código verifica se o tiro atingiu alguma nave. Se acertar, a energia da nave é reduzida e, se a energia chegar a zero, a nave é removida do tabuleiro.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O estado do jogo é atualizado após cada ronda, incluindo a exibição do tabuleiro e das informações sobre as naves, como a energia restante.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Se o número de tiros atingir 45, as naves recebem energia extra, utilizando o método <code>adicionar_energia_extra</code> de cada nave.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    O jogo termina quando o número de tiros chega a 105 ou quando todas as naves são destruídas (todas as energias chegam a zero). 
+                    O código exibe mensagens muito giras que fiz em ASCII quando acaba o jogo.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    Após cada ronda, há uma pausa utilizando <code>getpass</code>, que permite ao jogador pressionar Enter para continuar para a próxima ronda.
+                </li>
+            </ul>                                   
+        </div>
+        <div class="button-container">
+            <button class="back-btn" onclick="window.location.href='index.html'">Voltar à página inicial</button>
+            <button class="improve-btn" onclick="window.location.href='main_melhorias.html'">Ver melhorias no código</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Relatório de Avaliação - Programação</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
